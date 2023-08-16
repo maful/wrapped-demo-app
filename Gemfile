@@ -72,3 +72,4 @@ group :test do
 end
 
 gem "dotenv-rails", "~> 2.8"
+gem "sidekiq", "~> 7.1"

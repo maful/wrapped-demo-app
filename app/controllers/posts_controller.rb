@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
+        HardJob.perform_async(@post.id)
         format.html { redirect_to post_url(@post), notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
@@ -38,6 +39,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+        HardJob.perform_async(@post.id)
         format.html { redirect_to post_url(@post), notice: "Post was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
