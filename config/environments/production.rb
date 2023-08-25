@@ -90,4 +90,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # good_job configuration
+  config.good_job = {
+    preserve_job_records: true,
+    retry_on_unhandled_error: false,
+    on_thread_error: ->(exception) { Rails.error.report(exception) },
+    execution_mode: :external,
+    queues: "+critical,urgent,default,low",
+    shutdown_timeout: 25,
+    enable_cron: true,
+    dashboard_default_locale: :en,
+  }
 end
