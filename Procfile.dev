@@ -1,2 +1,2 @@
 web: bin/rails server -p 3001
-worker: bin/bundle exec good_job start --max-threads=5 --queue-select-limit=1000
+worker: bin/bundle exec sidekiq -C config/sidekiq.yml

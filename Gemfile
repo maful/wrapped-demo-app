@@ -73,5 +73,3 @@ end
 
 gem "dotenv-rails", "~> 2.8"
 gem "sidekiq", "~> 7.1"
-
-gem "good_job", "~> 3.17"

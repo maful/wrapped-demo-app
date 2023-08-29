@@ -67,16 +67,4 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-
-  # good_job configuration
-  config.good_job = {
-    preserve_job_records: true,
-    retry_on_unhandled_error: false,
-    on_thread_error: ->(exception) { Rails.error.report(exception) },
-    execution_mode: :external,
-    queues: "+critical,urgent,default,low",
-    shutdown_timeout: 25,
-    enable_cron: true,
-    dashboard_default_locale: :en,
-  }
 end
