@@ -1,3 +1,11 @@
-# README
+# Demo Rails App for WrappedBy
 
-worker: bin/bundle exec sidekiq -C config/sidekiq.yml
+## Production Credentials
+
+Copy and paste this master key to **Credentials Key** field in WrappedBy.
+
+```
+0f950a199f5af83527d10c34f76caa01
+```
+
+*Note: This is only a demo application, no sensitive information is stored.
