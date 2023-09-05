@@ -11,5 +11,6 @@ Copy and paste this master key to **Credentials Key** field in [WrappedBy](https
 ## Environment Variables
 
 - REDIS_URL (Example: redis://127.0.0.1:6379/1)
+- DATABASE_URL (Example: postgresql://user:password@127.0.0.1:5432/dbname)
 
 *Note: This is only a demo application, no sensitive information is stored.
