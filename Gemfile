@@ -72,3 +72,4 @@ group :test do
 end
 
 gem "sidekiq", "~> 7.1"
+gem "sd_notify", "~> 0.1.1"
